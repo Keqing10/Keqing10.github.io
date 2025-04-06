@@ -533,7 +533,7 @@ index:
   # 打开文章的标签方式
   # The browser tag to open the post
   # Available: _blank | _self
-  post_url_target: _self
+  post_url_target: _blank
 
   # 是否显示文章信息（时间、分类、标签）
   # Meta information of post
@@ -921,6 +921,7 @@ archive:
   banner_img: /img/background.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
+  # post_url_target: _blank
 
 
 #---------------------------

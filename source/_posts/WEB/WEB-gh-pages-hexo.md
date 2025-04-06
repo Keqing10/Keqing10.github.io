@@ -2,8 +2,8 @@
 title: GitHub Pages + Hexo网站搭建
 category_bar: true
 math: false
-tags: ["GitHub Pages", "Hexo"]
-category: [工具]
+tags: ["Web", "Hexo"]
+category: [Web]
 date: 2025-04-05 18:05:53
 ---
 
@@ -17,12 +17,13 @@ date: 2025-04-05 18:05:53
 
 ## 配置过程
 ### 安装hexo框架
-```shell
+```bash
 npm install -g hexo-cli
 ```
 然后进入指定目录执行如下命令：
-```shell
-hexo init <folder>  # <floder>就是要存储网站资源的文件夹，这一步可以任意设置，因为之后并不使用这个文件夹
+```bash
+hexo init <folder>
+# <floder>就是要存储网站资源的文件夹，这一步可以任意设置，因为之后并不使用这个文件夹
 cd <folder>
 npm install
 ```
@@ -122,7 +123,7 @@ language: zh-CN  # 指定语言，会影响主题显示的语言，按需修改
 ```
 
 创建“关于”页面：
-```shell
+```bash
 hexo new page about
 ```
 创建成功后修改`/source/about/index.md`，添加 layout 属性。修改后的文件示例如下：
@@ -135,7 +136,7 @@ layout: about  # 这一项不能修改
 这里写关于页的正文，支持 Markdown, HTML。
 ```
 最后，可以修改`themes/fluid/.gitignore`文件，添加以下条目，减少无用文件的push。
-```text
+```gitignore
 .github
 LICENSE
 README*.md
@@ -158,6 +159,7 @@ server:
 ### `hexo new`创建文章
 - `hexo new "titlename"`
 根据模板创建文章`titlname.md`，默认创建在`source/_posts/`目录下，模板文件默认为`scaffolds/post.md`。
+
 一个简单的模板示例为：
 ```yml
 ---
