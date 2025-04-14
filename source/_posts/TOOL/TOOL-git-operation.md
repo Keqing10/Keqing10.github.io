@@ -1,5 +1,5 @@
 ---
-title: Git
+title: Git学习笔记
 category_bar: true
 math: false
 tags: [Git]
