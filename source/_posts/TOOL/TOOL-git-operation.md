@@ -69,9 +69,10 @@ git clone git@github.com:User/Repo localDir
 - `git rebase <branchname>`：变基当前分支到指定分支。
 ### 回退
 - `git reset [--soft | --mixed | --hard] [HEAD]`
+
 ```bash
-git reset HEAD^            # 回退所有内容到上一个版本
-git reset HEAD~n           # 回退所有内容到前第n个版本
-git reset HEAD^ hello.php  # 回退 hello.php 文件的版本到上一个版本
-git reset 052e            # 回退到指定版本
+git reset HEAD^          # 回退所有内容到上一个版本
+git reset HEAD~n         # 回退所有内容到前第n个版本
+git reset HEAD^ hello.c  # 回退 hello.c 文件的版本到上一个版本
+git reset 052e           # 回退到指定版本
 ```
