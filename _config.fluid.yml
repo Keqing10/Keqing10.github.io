@@ -314,7 +314,7 @@ web_analytics:
 # Canonical, to specify a canonical URL for Google Search, need to set up `url: http://yourdomain.com` in hexo _config.yml
 # See: https://support.google.com/webmasters/answer/139066
 canonical:
-  enable: false
+  enable: true
 
 # 对页面中的图片和评论插件进行懒加载处理，可见范围外的元素不会提前加载
 # Lazy loading of images and comment plugin on the page
@@ -373,6 +373,17 @@ navbar:
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    # 子菜单的写法
+    # - {
+    #   key: '文档',
+    #   icon: 'iconfont icon-books',
+    #   link: '#',
+    #   submenu: [
+    #   { key: '安装主题', link: 'https://hexo.fluid-dev.com/docs/start/' },
+    #   { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/' },
+    #   { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/' }
+    #   ]
+    # }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -729,6 +740,8 @@ post:
 
     # Options: mathjax | katex
     engine: mathjax
+    mathjax:
+      process_escapes: true  # 允许转义符优先处理
 
   # 流程图，基于 mermaid-js，具体请见：https://hexo.fluid-dev.com/docs/guide/#mermaid-流程图
   # Flow chart, based on mermaid-js, see: https://hexo.fluid-dev.com/docs/en/guide/#mermaid
@@ -921,7 +934,7 @@ archive:
   banner_img: /img/background.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  # post_url_target: _blank
+  post_url_target: _blank
 
 
 #---------------------------
@@ -951,6 +964,8 @@ category:
   # 单个分类中折叠展示文章数的最大值，超过限制会显示 More，0 则不限制
   # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
   post_limit: 10
+
+  # post_url_target: _blank  # 新标签页打开文章，不生效
 
 
 #---------------------------
