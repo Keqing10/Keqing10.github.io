@@ -1,9 +1,9 @@
 ---
 title: 第1章 曲线和曲面的表示
-category\_bar: true
+category_bar: true
 math: true
-tags: [CAD, Bézier, B-样条, NURBS]
-category: [CAD, 《计算机辅助设计与制造中的外形分析》读书笔记]
+tags: [CG, CAD, Bézier, B-样条, NURBS]
+category: [CG, 《计算机辅助设计与制造中的外形分析》读书笔记]
 date: 2025-05-09 18:37:53
 ---
 
@@ -27,7 +27,7 @@ $$
 B\_{i,n}(t)=\sum\_{j=i}^{i+r}\frac{\binom{n}{i}\binom{r}{j-i}}{\binom{n+r}{j}}B\_{j,n+r}(t),\quad i=0,1,\cdots,n
 $$
 
-![4次Bernstein多项式](img/CAD/sa/1-4th-bernstein.png)
+![4次Bernstein多项式](img/CG/shapeanalyse/1-4th-bernstein.png)
 
 导数：
 $$
@@ -64,7 +64,7 @@ $$
 - 曲线在参数$t\_0$处的值是$\symbfit{b}\_n^n$；
 - 曲线在参数$t\_0$处剖分成两段Bézier曲线，控制顶点分别为：$\{\symbfit{b}\_0^0,\symbfit{b}\_1^1,\cdots,\symbfit{b}\_n^n\}$和$\{\symbfit{b}\_n^n,\symbfit{b}\_n^{n-1},\cdots,\symbfit{b}\_n^0\}$。
 
-![de Casteljau算法](img/CAD/sa/1-de-casteljau.png)
+![de Casteljau算法](img/CG/shapeanalyse/1-de-casteljau.png)
 ### 连续性算法
 两段Bézier曲线连接表示复杂曲线时需要考虑两条曲线之间的连续性。
 - $G^0$连续：位置连续，要求两条曲线的端点重合。
@@ -123,8 +123,8 @@ B-样条曲线具有如下性质：
     - B-样条曲线通常不通过两端控制顶点。增加节点重数会降低曲线在该节点处的连续性，在$k-1$重节点处，控制多边形与曲线重合，在$k$重节点处，曲线不连续。**端点插值型（clamped）**：将端节点重复$k$次可以使得曲线端点与控制多边形重合。如下图所示，有$t\_0=t\_1=\cdots=t\_{k-1}=t\_k$。
     - 如上定义的节点向量确定的B-样条曲线在端点处与控制多边形相切。
 
-![端点插值型节点向量](img/CAD/sa/1-clamped-vector.png)
-![端点插值型三次B-样条曲线](img/CAD/sa/1-clamped-3rd-b-spline.png)
+![端点插值型节点向量](img/CG/shapeanalyse/1-clamped-vector.png)
+![端点插值型三次B-样条曲线](img/CG/shapeanalyse/1-clamped-3rd-b-spline.png)
 
 - 凸包性质：一段曲线位于影响它的控制顶点的凸包内。如上图中的三次B-样条曲线的第$i$段曲线位于由控制顶点$\symbfit{p}\_{i-1},\symbfit{p}\_i,\symbfit{p}\_{i+1},\symbfit{p}\_{i+2}$形成的凸包内。
 - 局部支撑性质：B-样条曲线中的一段曲线是由$k$个控制顶点控制的，每一个控制顶点影响$k$段曲线。
