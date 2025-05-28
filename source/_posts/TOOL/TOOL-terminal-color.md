@@ -1,5 +1,5 @@
 ---
-title: 超高性能的on-my-posh替代方案
+title: 简易的终端染色方案
 category_bar: true
 math: false
 tags: [终端]
