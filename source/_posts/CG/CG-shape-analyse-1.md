@@ -21,10 +21,11 @@ $$
 - 线性精度：$t=\sum\_{i=0}^n\frac{i}{n}B\_{i,n}(t)$
 - 升阶性质：$n$次基函数可以表示为$n+1$次或更高次基函数的线性组合。
 $$
+\begin{gather*}
 B\_{i,n}(t)=\left(1-\frac{i}{n+1}\right)B\_{i,n+1}(t)+\frac{i+1}{n+1}B\_{i+1,n+1}(t),\quad i=0,1,\cdots,n
-$$
-$$
+\newline
 B\_{i,n}(t)=\sum\_{j=i}^{i+r}\frac{\binom{n}{i}\binom{r}{j-i}}{\binom{n+r}{j}}B\_{j,n+r}(t),\quad i=0,1,\cdots,n
+\end{gather*}
 $$
 
 ![4次Bernstein多项式](img/CG/shapeanalyse/1-4th-bernstein.png)
@@ -86,7 +87,7 @@ Bézier曲面继承了Bézier曲线的许多性质，如：几何不变性，端
 ## B-样条
 B-样条基函数$N\_{i,k}(t)$定义如下。当$k=1$时，
 $$
-N\_{i,1}(t)=\begin{cases}1,\quad &t\_i\leq t<t\_{i+1}\\
+N\_{i,1}(t)=\begin{cases}1,\quad &t\_i\leq t<t\_{i+1}\newline
 0,\quad &t<t\_i或t\geq t\_{i+1}\end{cases}
 $$
 当$k>1$且$i=0,1,\cdots,n$时，
@@ -142,7 +143,7 @@ $$
 $$
 其中
 $$
-\symbfit{p}\_i^j=(1-\alpha\_i^j)\symbfit{p}\_{i-1}^{j-1}+\alpha\_i^j\symbfit{p}\_i^{j-1},\ \alpha\_i^j=\frac{\bar{t}-t\_i}{t\_{i+k-j}-t\_i}且\symbfit{p}\_j^0=\symbfit{p}\_j
+\symbfit{p}\_i^j=(1-\alpha\_i^j)\symbfit{p}\_{i-1}^{j-1}+\alpha\_i^j\symbfit{p}\_i^{j-1},\quad \alpha\_i^j=\frac{\bar{t}-t\_i}{t\_{i+k-j}-t\_i}且\symbfit{p}\_j^0=\symbfit{p}\_j
 $$
 ### Boehm算法
 节点插入，新曲线与原曲线重合。

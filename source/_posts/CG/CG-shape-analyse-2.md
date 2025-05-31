@@ -11,12 +11,12 @@ date: 2025-05-18 12:02:51
 定义曲线段$\symbfit{r}=\symbfit{r}(t)$，弧长微分：$\mathrm{d}s=|\dot{\symbfit{r}}|\mathrm{d}t$。
 切向量：$\frac{\mathrm{d}\symbfit{r}}{\mathrm{d}t}$；**单位切向量**：$\symbfit{t}=\frac{\dot{\symbfit{r}}}{|\dot{\symbfit{r}}|}=\frac{\mathrm{d}\symbfit{r}}{\mathrm{d}s}=\symbfit{r}'$。用点号表示对非弧长参数求导，撇号表示对弧长参数$s$求导。
 $$
-\begin{aligned}
+\begin{align}
 \dot{s}&=|\dot{\symbfit{r}}| \newline
 \ddot{s}&=\frac{\dot{\symbfit{r}}\cdot \ddot{\symbfit{r}}}{|\dot{\symbfit{r}}|}\newline
 t'&=\frac{1}{|\dot{\symbfit{r}}|}\newline
 t''&=-\frac{\dot{\symbfit{r}}\cdot\ddot{\symbfit{r}}}{\left(\dot{\symbfit{r}}\cdot\dot{\symbfit{r}}\right)^2}
-\end{aligned}
+\end{align}
 $$
 
 **正则点**：如果在曲线$\symbfit{r}(t)=[x(t), y(t), z(t)]^\mathrm{T}$上的点$P$处满足$\dot{\symbfit{r}}(t)\neq 0$；非正则点称为奇异点。
@@ -50,19 +50,20 @@ $$
 
 隐式曲线：
 $$
-\begin{aligned}
+\begin{align}
 \boldsymbol{\alpha}&=(\alpha_1,\alpha_2,\alpha_3)=\nabla f\times\nabla g \newline
 \kappa&=\frac{\boldsymbol{\alpha}\times\left(\alpha_1\frac{\partial \boldsymbol{\alpha}}{\partial x}+\alpha_2\frac{\partial \boldsymbol{\alpha}}{\partial y}+\alpha_3\frac{\partial \boldsymbol{\alpha}}{\partial z}\right)}{|\boldsymbol{\alpha}|^3}
-\end{aligned}
+\end{align}
 $$
 
 # 副法向和挠率
 **副法向量**：
 $$
+\begin{gather}
 \symbfit{b}=\symbfit{t\times n}=\frac{\dot{\symbfit{r}}\times \ddot{\symbfit{r}}}{|\dot{\symbfit{r}}\times \ddot{\symbfit{r}}|}
-$$
-$$
+\newline
 \symbfit{b}'=\symbfit{t\times n'}
+\end{gather}
 $$
 
 ![空间曲线上切向量、法向量和副法向量定义的直角坐标系](img/CG/shapeanalyse/2-curve-tnb.png)
@@ -81,11 +82,11 @@ $$
 # Frenet-Serret公式
 由上文可知：
 $$
-\begin{aligned}
+\begin{align}
 \symbfit{t}'&=\kappa \symbfit{n} \newline
 \symbfit{b}'&=-\tau\symbfit{n} \newline
 \symbfit{n}'&=(\symbfit{b\times t})'=-\kappa\symbfit{t}+\tau\symbfit{b}
-\end{aligned}
+\end{align}
 $$
 可以将上述方程组表示为矩阵形式：
 $$

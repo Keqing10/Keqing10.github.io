@@ -39,10 +39,10 @@ E=\symbfit{r}\_u\cdot\symbfit{r}\_v\quad F=\symbfit{r}\_u\cdot\symbfit{r}\_v\qua
 $$
 **第一基本齐式**（first fundamental form）定义为
 $$
-\begin{aligned}
+\begin{align}
 I=\mathrm{d}s^2=\mathrm{d}\symbfit{r}\cdot\mathrm{d}\symbfit{r}&=E\mathrm{d}u^2+2F\mathrm{d}u\mathrm{d}v+G\mathrm{d}v^2 \newline
 &=\frac{(E\mathrm{d}u+F\mathrm{d}v)^2}{E}+\frac{EG-F^2}{E}\mathrm{d}v^2
-\end{aligned}
+\end{align}
 $$
 对于正则曲面：由于$EG-F^2=|\symbfit{r}\_u\times\symbfit{r}\_v|^2>0$和$E=|\symbfit{r}\_u|>0$，所以$I$为正值。故$I\geqslant 0$，当且仅当$\mathrm{d}u=\mathrm{d}v=0$时，$I=0$。
 
@@ -63,17 +63,17 @@ $$\mathrm{d}A = \sqrt{EG - F^2} \, \mathrm{d}u\mathrm{d}v$$
 ![法曲率的定义](img/CG/shapeanalyse/3-kn-defination.png)
 
 对于$\symbfit{N\cdot t}=0$沿曲线弧长微分可得：
-$$\begin{aligned}
-\kappa\_n &= \frac{\mathrm{d}\boldsymbol{t}}{\mathrm{d}s} \cdot \boldsymbol{N} = -\boldsymbol{t} \cdot \frac{\mathrm{d}\boldsymbol{N}}{\mathrm{d}s} = -\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s} \cdot \frac{\mathrm{d}\boldsymbol{N}}{\mathrm{d}s} = -\frac{\mathrm{d}\boldsymbol{r} \cdot \mathrm{d}\boldsymbol{N}}{\mathrm{d}\boldsymbol{r} \cdot \mathrm{d}\boldsymbol{r}} \newline
+$$\begin{align}
+\kappa\_{\mathrm{n}} &= \frac{\mathrm{d}\boldsymbol{t}}{\mathrm{d}s} \cdot \boldsymbol{N} = -\boldsymbol{t} \cdot \frac{\mathrm{d}\boldsymbol{N}}{\mathrm{d}s} = -\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s} \cdot \frac{\mathrm{d}\boldsymbol{N}}{\mathrm{d}s} = -\frac{\mathrm{d}\boldsymbol{r} \cdot \mathrm{d}\boldsymbol{N}}{\mathrm{d}\boldsymbol{r} \cdot \mathrm{d}\boldsymbol{r}} \newline
 &= \frac{L\mathrm{d}u^2 + 2M\mathrm{d}u\mathrm{d}v + N\mathrm{d}v^2}{E\mathrm{d}u^2 + 2F\mathrm{d}u\mathrm{d}v + G\mathrm{d}v^2}
-\end{aligned}$$
+\end{align}$$
 其中：
 $$
-\begin{aligned}
+\begin{align}
 L &= - \boldsymbol{r}\_u \cdot \boldsymbol{N}\_u,\newline
 M &= - \frac{1}{2} (\boldsymbol{r}\_u \cdot \boldsymbol{N}\_v + \boldsymbol{r}\_v \cdot \boldsymbol{N}\_u) = - \boldsymbol{r}\_u \cdot \boldsymbol{N}\_v = - \boldsymbol{r}\_v \cdot \boldsymbol{N}\_u \newline
 N &= - \boldsymbol{r}\_v \cdot \boldsymbol{N}\_v
-\end{aligned}$$
+\end{align}$$
 由于$\symbfit{r}\_u$和$\symbfit{r}\_v$都垂直于$\symbfit{N}$，可得：
 $$L = \boldsymbol{r}\_{uu} \cdot \boldsymbol{N}, \quad M = \boldsymbol{r}\_{uv} \cdot \boldsymbol{N}, \quad N = \boldsymbol{r}\_{vv} \cdot \boldsymbol{N}$$
 **第二基本齐式**定义为：
@@ -87,10 +87,10 @@ $$
 其中$\lambda=\frac{\mathrm{d}u}{\mathrm{d}v}$为曲线$C$在点$P$处的切线方向。由上可知法曲率只依赖于切向$\lambda$。
 **Meusnier定理**：曲面$S$上过点$P$且具有相同切向的所有曲线在点$P$处具有相同的法曲率。
 根据泰勒展开可得：
-$$\begin{aligned}
+$$\begin{align}
 \boldsymbol{PQ}&=\boldsymbol{r}(u + \mathrm{d}u, v + \mathrm{d}v)-\boldsymbol{r}(u, v)\newline
 &=\boldsymbol{r}\_u\mathrm{d}u+\boldsymbol{r}\_v\mathrm{d}v+\frac{1}{2}(\boldsymbol{r}\_{uu}\mathrm{d}u^2 + 2\boldsymbol{r}\_{uv}\mathrm{d}u\mathrm{d}v+\boldsymbol{r}\_{vv}\mathrm{d}v^2)+\cdots
-\end{aligned}$$
+\end{align}$$
 忽略高阶项可得：
 $$d = \boldsymbol{PQ} \cdot \boldsymbol{N} = (\boldsymbol{r}\_u \mathrm{d}u + \boldsymbol{r}\_v \mathrm{d}v) \cdot \boldsymbol{N} + \frac{1}{2} II=\frac{1}{2}II=\frac{1}{2}(L\mathrm{d}u^2+2M\mathrm{d}u\mathrm{d}v+N\mathrm{d}v^2)$$
 ![曲面第二基本齐式的几何描述](img/CG/shapeanalyse/3-II-geometry.png)
@@ -111,14 +111,19 @@ $$
 成立时（方程的判别式为0），该点称为**脐点**（umbilic）。该点处沿各个方向的法曲率是相同的。
 定义：
 $$
+\begin{gather}
 \text{高斯曲率}\quad K = \frac{LN - M^2}{EG - F^2}
-$$
-$$
+\newline
 \text{中曲率}\quad H = \frac{EN + GL - 2FM}{2(EG - F^2)}
+\end{gather}
 $$
 则关于$\kappa\_{\mathrm{n}}$的方程可以简化为$\kappa\_{n}^{2}-2H\kappa\_{n}+K = 0$，求解得到极值：
-$$\kappa\_{\text{max}} = H + \sqrt{H^{2}-K}$$
-$$\kappa\_{\text{min}} = H - \sqrt{H^{2}-K}$$
+$$
+\begin{gather}
+\kappa\_{\text{max}} = H + \sqrt{H^{2}-K} \newline
+\kappa\_{\text{min}} = H - \sqrt{H^{2}-K}
+\end{gather}
+$$
 对应的主方向是：
 $$\lambda = -\frac{M - \kappa\_{\mathrm{n}} F}{N - \kappa\_{\mathrm{n}} G} = -\frac{L - \kappa\_{\mathrm{n}} E}{M - \kappa\_{\mathrm{n}} F}$$
 当$H^2=K$时，对应曲面上的脐点处，曲面局部等价于半径为$\frac{1}{|H|}$的球面。当$K=H=0$时，对应曲面上的平面点。
@@ -128,10 +133,10 @@ $$\lambda = -\frac{M - \kappa\_{\mathrm{n}} F}{N - \kappa\_{\mathrm{n}} G} = -\f
 # 高斯曲率和中曲率
 高斯曲率和中曲率分别是了两个主曲率的乘积和平均：
 $$
-\begin{aligned}
+\begin{gather}
 K=\kappa\_{\max}\kappa\_{\min} \newline
 H=\frac{\kappa\_{\max}+\kappa\_{\min}}{2}
-\end{aligned}
+\end{gather}
 $$
 对于曲面上一点：
 - $K>0$：椭圆点；
@@ -142,24 +147,31 @@ $$
 ## 显式曲面
 曲面表示为显式形式$z=h(x,y)$时，可以写为参数形式$\symbfit{r}=\left[u\quad  v\quad h(u,v)\right]^{\mathrm{T}}$，其中$u=x,v=y$。这种表示方法成为**蒙日形式**（Monger form），对应的曲面片称为蒙日曲面片。法向、第一和第二基本齐式的系数如下：
 $$
+\begin{gather}
 E=1 + h\_{x}^{2}, \quad F = h\_{x}h\_{y}, \quad G = 1 + h\_{y}^{2}
-$$
-$$
+\newline
 \symbfit{N}=\frac{[-h\_{x}\quad -h\_{y}\quad 1]^{\mathrm{T}}}{\sqrt{1 + h\_{x}^{2}+h\_{y}^{2}}}
-$$
-$$
+\newline
 L=\frac{h\_{xx}}{\sqrt{1 + h\_{x}^{2}+h\_{y}^{2}}}, \quad M=\frac{h\_{xy}}{\sqrt{1 + h\_{x}^{2}+h\_{y}^{2}}}, \quad N=\frac{h\_{yy}}{\sqrt{1 + h\_{x}^{2}+h\_{y}^{2}}}
+\end{gather}
 $$
 故：
-$$K = \frac{LN - M^2}{EG - F^2} = \frac{h\_{xx}h\_{yy} - h\_{xy}^2}{(1 + h\_x^2 + h\_y^2)^2}$$
-
-$$H = \frac{EN + GL - 2FM}{2(EG - F^2)} = \frac{(1 + h\_x^2)h\_{yy} - 2h\_x h\_y h\_{xy} + (1 + h\_y^2)h\_{xx}}{2(1 + h\_x^2 + h\_y^2)^{\frac{3}{2}}}$$
+$$
+\begin{gather}
+K = \frac{LN - M^2}{EG - F^2} = \frac{h\_{xx}h\_{yy} - h\_{xy}^2}{(1 + h\_x^2 + h\_y^2)^2} \newline
+H = \frac{EN + GL - 2FM}{2(EG - F^2)} = \frac{(1 + h\_x^2)h\_{yy} - 2h\_x h\_y h\_{xy} + (1 + h\_y^2)h\_{xx}}{2(1 + h\_x^2 + h\_y^2)^{\frac{3}{2}}}
+\end{gather}
+$$
 
 ## 隐式曲面
 对于隐式曲面$f(x,y,z)=0$上的$f\_z\neq 0$处，有$h\_x=-\frac{f\_x}{f\_z}$，$h\_y=-\frac{f\_y}{f\_z}$。二阶偏导数如下：
-$$h\_{xx} = - \frac{\left( \frac{\partial f\_x}{\partial x} \right)\_y f\_z - \left( \frac{\partial f\_z}{\partial x} \right)\_y f\_x}{f\_z^2} = \frac{2 f\_x f\_z f\_{xz} - f\_x^2 f\_{zz} - f\_z^2 f\_{xx}}{f\_z^3}$$
-$$h\_{xy} = \frac{f\_x f\_z f\_{yz} + f\_y f\_z f\_{xz} - f\_x f\_y f\_{zz} - f\_z^2 f\_{xy}}{f\_z^3}$$
-$$h\_{yy} = \frac{2f\_y f\_z f\_{yz} - f\_y^2 f\_{zz} - f\_z^2 f\_{yy}}{f\_z^3}$$
+$$
+\begin{gather}
+h\_{xx} = - \frac{\left( \frac{\partial f\_x}{\partial x} \right)\_y f\_z - \left( \frac{\partial f\_z}{\partial x} \right)\_y f\_x}{f\_z^2} = \frac{2 f\_x f\_z f\_{xz} - f\_x^2 f\_{zz} - f\_z^2 f\_{xx}}{f\_z^3} \newline
+h\_{xy} = \frac{f\_x f\_z f\_{yz} + f\_y f\_z f\_{xz} - f\_x f\_y f\_{zz} - f\_z^2 f\_{xy}}{f\_z^3} \newline
+h\_{yy} = \frac{2f\_y f\_z f\_{yz} - f\_y^2 f\_{zz} - f\_z^2 f\_{yy}}{f\_z^3}
+\end{gather}
+$$
 分别带入显式曲面对应式子即可得到第一和第二基本齐式的系数。如果$f\_z=0$，可以通过对$x,y,z$的置换得到改变的公式。
 ### 二次曲面
 可以通过适当的旋转消去交叉项，通过平移使得曲面以原点为中心以消去一阶项。二次曲面的**中心**定义为连接曲面上任意两点的一条弦的等分点。椭球面和双曲面具有中心，而抛物面没有中心。椭圆/双曲柱面是椭球面和双曲面的极限情形，椭圆锥面是单片和双片双曲面的渐近形式。于是二次曲面总可以表示为如下标准形式：
@@ -183,24 +195,34 @@ $$
 
 利用上述隐式曲面公式可得：
 $$
-K(x,y,z) = \frac{\zeta\eta\xi\delta}{a^{2}b^{2}c^{2}\left(\zeta^{2}\frac{x^{2}}{a^{4}}+\eta^{2}\frac{y^{2}}{b^{4}}+\xi^{2}\frac{z^{2}}{c^{4}}\right)^{2}}$$
-$$H(x,y,z) = -\frac{\zeta^{2}b^{2}c^{2}(\xi b^{2}+\eta c^{2})x^{2}+\eta^{2}a^{2}c^{2}(\xi a^{2}+\zeta c^{2})y^{2}+\xi^{2}a^{2}b^{2}(\eta a^{2}+\zeta b^{2})z^{2}}{2a^{4}b^{4}c^{4}\left(\zeta^{2}\frac{x^{2}}{a^{4}}+\eta^{2}\frac{y^{2}}{b^{4}}+\xi^{2}\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}$$
+\begin{gather}
+K(x,y,z) = \frac{\zeta\eta\xi\delta}{a^{2}b^{2}c^{2}\left(\zeta^{2}\frac{x^{2}}{a^{4}}+\eta^{2}\frac{y^{2}}{b^{4}}+\xi^{2}\frac{z^{2}}{c^{4}}\right)^{2}} \newline
+H(x,y,z) = -\frac{\zeta^{2}b^{2}c^{2}(\xi b^{2}+\eta c^{2})x^{2}+\eta^{2}a^{2}c^{2}(\xi a^{2}+\zeta c^{2})y^{2}+\xi^{2}a^{2}b^{2}(\eta a^{2}+\zeta b^{2})z^{2}}{2a^{4}b^{4}c^{4}\left(\zeta^{2}\frac{x^{2}}{a^{4}}+\eta^{2}\frac{y^{2}}{b^{4}}+\xi^{2}\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}
+\end{gather}
+$$
 于是主曲率为$\kappa=H\pm\sqrt{H^2-K}$。
 
 双曲柱面（$\zeta = \delta = 1$, $\eta = -1$, $\xi = 0$）$f(x,y)=\frac{x^2}{a^2}-\frac{y^2}{b^2}-1=0$的曲率为：
 $$
+\begin{gather}
 K=0,\quad H=\frac{b^{2}x^{2}-a^{2}y^{2}}{2a^{4}b^{4}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}\right)^{\frac{3}{2}}}
-$$
-$$\kappa\_{\max} = \frac{b^{2}x^{2} - a^{2}y^{2}}{a^{4}b^{4}\left(\frac{x^{2}}{a^{4}} + \frac{y^{2}}{b^{4}}\right)^{\frac{3}{2}}}, \quad \kappa\_{\min} = 0$$
+\newline
+\kappa\_{\max} = \frac{b^{2}x^{2} - a^{2}y^{2}}{a^{4}b^{4}\left(\frac{x^{2}}{a^{4}} + \frac{y^{2}}{b^{4}}\right)^{\frac{3}{2}}}, \quad \kappa\_{\min} = 0
+\end{gather}$$
 椭球面（$\zeta = \eta = \xi = \delta = 1$）$f(x,y,z)=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}-1 = 0$的曲率为：
-$$K = \frac{1}{a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{2}}, \quad H = \frac{x^{2}+y^{2}+z^{2}-a^{2}-b^{2}-c^{2}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}$$
-
-$$\kappa = \frac{x^{2}+y^{2}+z^{2}-a^{2}-b^{2}-c^{2}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}\pm\frac{\sqrt{(x^{2}+y^{2}+z^{2}-a^{2}-b^{2}-c^{2})^{2}-4a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}$$
+$$
+\begin{gather}
+K = \frac{1}{a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{2}}, \quad H = \frac{x^{2}+y^{2}+z^{2}-a^{2}-b^{2}-c^{2}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}} \newline
+\kappa = \frac{x^{2}+y^{2}+z^{2}-a^{2}-b^{2}-c^{2}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}\pm\frac{\sqrt{(x^{2}+y^{2}+z^{2}-a^{2}-b^{2}-c^{2})^{2}-4a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}
+\end{gather}
+$$
 特别地，对于半径为$R$的球面，可以得到：$K=\frac{1}{R^2}$，$H=\kappa=-\frac{1}{R}$。
 椭圆锥面（$\zeta = \eta = 1, \xi = -1, \delta = 0$）$f(x,y,z)=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}} = 0$的曲率为：
-$$K = 0, \quad H = -\frac{x^{2}+y^{2}+z^{2}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}$$
-
-$$\kappa\_{\max}=0, \quad \kappa\_{\min}=-\frac{x^{2}+y^{2}+z^{2}}{a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}$$
+$$
+\begin{gather}
+K = 0, \quad H = -\frac{x^{2}+y^{2}+z^{2}}{2a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}\newline
+\kappa\_{\max}=0, \quad \kappa\_{\min}=-\frac{x^{2}+y^{2}+z^{2}}{a^{2}b^{2}c^{2}\left(\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}\right)^{\frac{3}{2}}}
+\end{gather}$$
 
 # 欧拉定理和丢潘标形
 **欧拉定理**：在曲面上任意一点$P$处，沿任意一个参数方向（在切平面内）的法曲率可以表示为点$P$两个主曲率的线性组合：
