@@ -36,7 +36,7 @@ wsl --import Fedora D:/VM/WSL/Fedora D:/Fedora.tar
 ```
 
 此时进入路径`D:/VM/WSL/Fedora`可以看到有如下两个文件：
-```
+```bash
 ~ > ls
 Mode         LastWriteTime         Length Name
 ----         -------------         ------ ----
