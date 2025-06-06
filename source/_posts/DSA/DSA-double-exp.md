@@ -144,3 +144,44 @@ double ulp(double x) {
 | nextafter   | 0.0197138 秒 |
 | short数组   | 0.0226829 秒 |
 | frexp+ldexp | 0.0536366 秒 |
+
+
+## 舍入区间算法的实现
+对于给定的$x$，目的是构造最紧的区间$[x_{\mathrm{l}},x_{\mathrm{u}}]$，使得$x_{\mathrm{l}}$为不大于$x$的最大可表示数，$x_{\mathrm{u}}$为不小于$x$的最小可表示数：
+$$x_{\mathrm{l}}\leqslant x\leqslant x_{\mathrm{u}}$$
+特别地，当$x$可以精确表示时，有$x_{\mathrm{l}}= x= x_{\mathrm{u}}$。
+
+首先定义区间如下。
+```cpp
+class Interval {
+private:
+    double low, upp;
+public:
+	Interval() : low(0), upp(0) {}
+	Interval(double l, double u) : low(l), upp(u) {}
+    friend Interval add(Interval, Interval);
+	Interval operator+(Interval other) {
+		return add(*this, other);
+	}
+};
+```
+通过ulp进行计算，有$x_{\mathrm{l}}<x<x_{\mathrm{u}}$。
+```cpp
+Interval add(Interval a, Interval b) {
+	double low = a.low + b.low;
+	double upp = a.upp + b.upp;
+	return Interval(low - ulp(low), upp + ulp(upp));
+}
+```
+远古时代的SGI系统具有一个特殊函数`swapRM()`可以用来设定IEEE 754舍入模式。现在可以使用标准库`<cfenv>`中的`std::fesetround()`函数实现类似的功能。满足$x_{\mathrm{l}}\leqslant x\leqslant x_{\mathrm{u}}$。
+```cpp
+Interval add(Interval a, Interval b) {
+    Interval c;
+    swapRM(ROUND_TO_MINUS_INFINITY);
+    c.low = a.low + b.low;
+    swapRM(ROUND_TO_PLUS_INFINITY);
+    c.upp = a.upp + b.upp;
+    return c;
+}
+```
+
