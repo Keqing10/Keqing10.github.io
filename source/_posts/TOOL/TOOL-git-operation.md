@@ -63,11 +63,16 @@ git clone git@github.com:User/Repo localDir
   - `git stash list`：查看现有stash。
   - `git stash apply`：应用最近一次stash。
   - `git stash pop`：应用并删除最近一次stash。
-  - `git stash drop <stashname>`：删除某个stash，如`stash@{n}`。
+  - `git stash drop <stashname>`：删除某个stash，如`"stash@{n}"`或`0`。
   - `git stash clear`：清空所有stash。
+
+多次暂存操作之后，`0`号总是保存最新的一次暂存内容，最早的暂存内容标号逐渐增大。
+
 ### 变基
 - `git rebase <branchname>`：变基当前分支到指定分支。
 ### 回退
+- `git reflog`：查看最近所有变更历史，是临时记录。
+- `git log`：查看最近提交（commit）历史。
 - `git reset [--soft | --mixed | --hard] [HEAD]`
 
 ```bash
