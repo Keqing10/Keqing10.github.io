@@ -157,21 +157,9 @@ void Solution::printBoard()
 {
     for (int i = 0; i < SIZE; ++i) {
         for (int j = 0; j < SIZE; ++j) {
-            cout << map[i][j] << " \n"[j == 8];
+            cout << map[i][j] << " \n"[j == SIZE - 1];
         }
     }
-}
-
-std::vector<std::vector<int>> translate(std::vector<std::vector<char>>& board)
-{
-    std::vector<std::vector<int>> ans(9, std::vector<int>(9));
-    for (int i = 0; i < 9; ++i) {
-        for (int j = 0; j < 9; ++j) {
-            if (board[i][j] >= '1' && board[i][j] <= '9') ans[i][j] = board[i][j] - '0';
-            else ans[i][j] = 0;
-        }
-    }
-    return ans;
 }
 ```
 
