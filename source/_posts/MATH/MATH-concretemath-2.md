@@ -1,9 +1,9 @@
 ---
-title: 《具体数学》第二章 和式学习笔记
-category\_bar: true
+title: 第二章 和式
+category_bar: true
 math: true
 tags: [具体数学, 和式, 有限微积分]
-category: [数理基础, 具体数学]
+category: [数理基础, 《具体数学》学习笔记]
 date: 2025-11-27 18:49:02
 ---
 
