@@ -2,7 +2,7 @@
 title: 关于彩虹的宽度的一点计算
 category_bar: true
 math: false
-tags: ["光学"]
+tags: [光学]
 category: [数理基础]
 date: 2025-10-15 18:13:19
 ---
