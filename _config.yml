@@ -105,4 +105,4 @@ deploy:
 
 
 server:
-  port: 8080  # 自定义端口号
+  port: 11250  # 自定义端口号
